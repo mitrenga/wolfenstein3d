@@ -1,0 +1,27 @@
+{
+    "standalone": [
+        "svision/js/platform/canvas2D/vga/vgaVideoRAM.js",
+        "svision/js/platform/canvas2D/vga/vgaPalette.js",
+        "svision/js/audio/chip/opl2.js",
+        "svision/js/audio/chip/adlibIMF.js",
+        "musicWorker.js",
+        "wolf/fixed.js",
+        "wolf/spriteNumbers.js",
+        "wolf/soundNumbers.js",
+        "wolf/soundTables.js",
+        "wolf/digiMap.js",
+        "wolf/stateTable.js",
+        "wolf/tables.js",
+        "wolf/random.js",
+        "wolf/world.js",
+        "wolf/assets.js",
+        "wolf/player.js",
+        "wolf/actors.js",
+        "wolf/render.js",
+        "wolf/hud.js",
+        "wolf/sound.js",
+        "wolf/screens.js",
+        "wolf/game.js",
+        "gameWorker.js"
+    ]
+}
