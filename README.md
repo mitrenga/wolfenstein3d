@@ -84,3 +84,23 @@ reloadem nevzniknou: `data/` (vyrábí `node tools/mkdata.mjs`) a
 z `GameModel.WORKER_SOURCES`).
 
 Build (`svtool build`) je věc produkce a spouští ho uživatel ručně.
+
+## ⚠ Open issue — game data (data/)
+
+The game's data in `data/` is derived from the original and is **not in git**
+(`.gitignore`): every machine generates it from the operator's copy with the
+project's `dump*` tools. Before the project moves on, decide and document:
+
+1. **Storage** — where the data lives on the server, in what format and size,
+   how it is produced from the original and how its completeness and
+   correctness are verified (`SHA256SUMS`, `check*`).
+2. **Versioning** — how a data set is tied to the version of the game and of
+   the tools that produced it, when the files themselves are not versioned
+   (a manifest with hashes and the dump version).
+3. **Loading** — how the game loads it (all at once or on demand, through
+   `appData` or directly), and what happens when a file is missing.
+4. **Caching** — the browser and the service worker (precache or on demand,
+   invalidation by version); `localStorage` is only a cache of server data
+   and may be wiped at any time.
+
+Raised 2026-11-08 for every project whose data is outside git.
